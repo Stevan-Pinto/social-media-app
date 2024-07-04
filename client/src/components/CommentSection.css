@@ -1,0 +1,32 @@
+/* CommentSection.css */
+.commentSection {
+    margin-top: 10px;
+  }
+  
+  .comment {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .commentSection form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .commentSection input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+  }
+  
+  .commentSection button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #2E81F4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  

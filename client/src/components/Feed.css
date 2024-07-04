@@ -1,0 +1,33 @@
+/* Feed.css */
+.feed {
+  margin-left: 320px;
+  margin-top: 70px;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.feed .postForm {
+  margin-bottom: 20px;
+}
+
+.feed .postForm textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.feed .postForm input[type="file"] {
+  margin-top: 10px;
+}
+
+.feed .postForm button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2E81F4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,39 @@
+/* Sidebar.css */
+.sidebar {
+  width: 300px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  padding: 20px;
+  height: 100%;
+  background-color: #F0F2F5;
+}
+
+.sidebar__profilePic {
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__link {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar__link img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.sidebar__link:hover {
+  background-color: #E4E6EB;
+  border-radius: 10px;
+  padding-left: 10px;
+}
