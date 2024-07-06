@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './PostForm.css';
 
-const PostForm = ({ onNewPost }) => {
+const PostForm = () => {
   const [content, setContent] = useState('');
   const [image, setImage] = useState(null);
   const [error, setError] = useState('');
@@ -11,7 +11,7 @@ const PostForm = ({ onNewPost }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    
+
     if (!content && !image) {
       setError('Please add content or an image');
       return;
@@ -26,13 +26,12 @@ const PostForm = ({ onNewPost }) => {
         formData.append('image', image);
       }
 
-      const response = await axios.post('http://localhost:4000/posts', formData, {
+      await axios.post('http://localhost:4000/posts', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
 
-      onNewPost(response.data);
       setContent('');
       setImage(null);
     } catch (error) {
@@ -50,13 +49,13 @@ const PostForm = ({ onNewPost }) => {
         value={content}
         onChange={(e) => setContent(e.target.value)}
         placeholder="What's on your mind?"
-        disabled={submitting} // Disable textarea while submitting
+        disabled={submitting}
       />
       <input
         type="file"
         accept="image/*"
         onChange={(e) => setImage(e.target.files[0])}
-        disabled={submitting} // Disable file input while submitting
+        disabled={submitting}
       />
       <button type="submit" disabled={submitting}>Post</button>
     </form>

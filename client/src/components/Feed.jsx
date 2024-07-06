@@ -41,10 +41,6 @@ const Feed = () => {
     };
   }, []);
 
-  const handleNewPost = (newPost) => {
-    setPosts(prevPosts => [newPost, ...prevPosts]);
-  };
-
   const handleDeletePost = async (postId) => {
     try {
       await axios.delete(`http://localhost:4000/posts/${postId}`, {
@@ -60,7 +56,7 @@ const Feed = () => {
 
   return (
     <div className="feed">
-      <PostForm onNewPost={handleNewPost} />
+      <PostForm />
       {posts.map(post => (
         <Post key={post._id} post={post} onDelete={handleDeletePost} />
       ))}
